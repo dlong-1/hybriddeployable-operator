@@ -107,5 +107,9 @@ $ kubectl delete -f deploy/crds/app.cp4mcm.ibm.com_hybriddeployables_crd.yaml
 
 Please refer to [Troubleshooting documentation](docs/trouble_shooting.md) for further info.
 
-## HybridApplication References
-...
+## References
+
+### HybridApplication Related Repositories
+- [HybridApplication Operater](https://github.com/IBM/hybridapplication-operator)
+- [HybridDeployable Operator](https://github.com/IBM/hybriddeployable-operator)
+- [Deployer Operator](https://github.com/IBM/deployer-operator)
