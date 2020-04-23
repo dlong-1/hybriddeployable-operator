@@ -95,11 +95,7 @@ simple   11s
 #### Uninstall HybridDeployable Operator
 Remove all resources created.
 ```shell
-$ kubectl delete -f deploy/crds/app.cp4mcm.ibm.com_hybriddeployables_cr.yaml
-$ kubectl delete -f deploy/operator.yaml
-$ kubectl delete -f deploy/role_binding.yaml
-$ kubectl delete -f deploy/role.yaml
-$ kubectl delete -f deploy/service_account.yaml
+$ kubectl delete -f deploy
 $ kubectl delete -f deploy/crds/app.cp4mcm.ibm.com_hybriddeployables_crd.yaml
 ```
 

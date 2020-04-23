@@ -41,7 +41,7 @@ spec:
       containers:
       - name: hybriddeployable-operator
         # Replace this with the built image name
-        image: REPLACE_IMAGE
+        image: quay.io/multicloudlab/hybriddeployable-operator@sha256:13d4ccfbab7833ff0bddedd2e3c357cf4f9987fcac92147228349efdfaba3704
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
