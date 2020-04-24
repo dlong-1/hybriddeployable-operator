@@ -22,6 +22,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## What is the HybridDeployable Operator
+
 The hybridDeployable resource is introduced to handle deployable components running on non-kubernetes platform(s). This operator is intended to work as part of collection of operators for the HybridApplication.  See [References](#hybridApplication-references) for additional information.
 
 ## Community, discussion, contribution, and support
@@ -52,6 +53,7 @@ $ cd "$GOPATH"/src/github.com/IBM
 $ git clone https://github.com/IBM/hybriddeployable-operator.git
 $ cd "$GOPATH"/src/github.com/IBM/hybriddeployable-operator
 ```
+
 #### Build HybridDeployable Operator
 
 Build the hybriddeployable-operator and push it to a registry.  Modify the example below to reference a container reposistory you have access to.
@@ -63,19 +65,24 @@ $ docker push quay.io/johndoe/hybriddeployable-operator:v0.1.0
 ```
 
 #### Install HybridDeployable Operator
+
 Register the CRD.
+
 ```shell
 $ kubectl create -f deploy/crds/app.cp4mcm.ibm.com_hybriddeployables_crd.yaml
 ```
 
 Setup RBAC and deploy.
+
 ```shell
 $ kubectl create -f deploy/service_account.yaml
 $ kubectl create -f deploy/role.yaml
 $ kubectl create -f deploy/role_binding.yaml
 $ kubectl create -f deploy/operator.yaml
 ```
+
 Verify hybriddeployable-operator is up and running.
+
 ```shell
 $ kubectl get deployment
 NAME                        READY   UP-TO-DATE   AVAILABLE   AGE
@@ -83,6 +90,7 @@ hybriddeployable-operator   1/1     1            1           2m20s
 ```
 
 Create the sample CR.
+
 ```shell
 $ kubectl create -f deploy/crds/app.cp4mcm.ibm.com_hybriddeployables_cr.yaml
 NAME                        READY   UP-TO-DATE   AVAILABLE   AGE
@@ -93,7 +101,9 @@ simple   11s
 ```
 
 #### Uninstall HybridDeployable Operator
+
 Remove all resources created.
+
 ```shell
 $ kubectl delete -f deploy
 $ kubectl delete -f deploy/crds/app.cp4mcm.ibm.com_hybriddeployables_crd.yaml
@@ -106,6 +116,7 @@ Please refer to [Troubleshooting documentation](docs/trouble_shooting.md) for fu
 ## References
 
 ### HybridApplication Related Repositories
+
 - [HybridApplication Operater](https://github.com/IBM/hybridapplication-operator)
 - [HybridDeployable Operator](https://github.com/IBM/hybriddeployable-operator)
 - [Deployer Operator](https://github.com/IBM/deployer-operator)
